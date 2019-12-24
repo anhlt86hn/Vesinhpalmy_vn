@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ef8613b97fc84314bf1428277c9894db" Name="Diagram1">
+        <EntityTypeShape EntityType="vesinhpalmy_vn_dbModel.Config" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vesinhpalmy_vn_dbModel.Contact" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vesinhpalmy_vn_dbModel.GroupMember" Width="1.5" PointX="10.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vesinhpalmy_vn_dbModel.GroupNew" Width="1.5" PointX="5.75" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="vesinhpalmy_vn_dbModel.GroupService" Width="1.5" PointX="0.75" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="vesinhpalmy_vn_dbModel.GroupSupport" Width="1.5" PointX="2.75" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="vesinhpalmy_vn_dbModel.Image" Width="1.5" PointX="10.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vesinhpalmy_vn_dbModel.Member" Width="1.5" PointX="0.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vesinhpalmy_vn_dbModel.Menu" Width="1.5" PointX="2.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vesinhpalmy_vn_dbModel.ModuleUser" Width="1.5" PointX="4.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vesinhpalmy_vn_dbModel.News" Width="1.5" PointX="8" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="vesinhpalmy_vn_dbModel.PermissionModule" Width="1.5" PointX="6.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vesinhpalmy_vn_dbModel.Service" Width="1.5" PointX="3" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="vesinhpalmy_vn_dbModel.Support" Width="1.5" PointX="5" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="vesinhpalmy_vn_dbModel.sysdiagram" Width="1.5" PointX="12.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vesinhpalmy_vn_dbModel.User" Width="1.5" PointX="12.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vesinhpalmy_vn_dbModel.UserModule" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vesinhpalmy_vn_dbModel.v_ModuleUser" Width="1.5" PointX="12.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vesinhpalmy_vn_dbModel.v_News_GroupNews" Width="1.5" PointX="12.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vesinhpalmy_vn_dbModel.v_Permission_GroupProduct" Width="1.5" PointX="14.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vesinhpalmy_vn_dbModel.v_Service_GroupService" Width="1.5" PointX="14.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vesinhpalmy_vn_dbModel.v_Support_NameGroup" Width="1.5" PointX="4.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vesinhpalmy_vn_dbModel.v_UserModule" Width="1.5" PointX="6.75" PointY="14.75" IsExpanded="true" />
+        <AssociationConnector Association="vesinhpalmy_vn_dbModel.FRK_TINTUC_NHOMTIN" ManuallyRouted="false" />
+        <AssociationConnector Association="vesinhpalmy_vn_dbModel.FK_Service_GroupService" ManuallyRouted="false" />
+        <AssociationConnector Association="vesinhpalmy_vn_dbModel.FRK_HOTRO_NHOMHOTRO" ManuallyRouted="false" />
+        <AssociationConnector Association="vesinhpalmy_vn_dbModel.FK_UserModule_UserModule" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,113 @@
+﻿@model VesinhPalmy_vn.Models.Image
+@{
+    ViewBag.Title = "Chỉnh sửa tin";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>@ViewBag.Title</h2>
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+    <table class="TableUpdate" border="1">
+        <tr>
+            <td class="Control" colspan="2"> 
+                <ul>
+                        <li><input type="submit" value="Ghi lại "class="uupdate" /></li>
+                    <li>@Html.ActionLink("Trở về", "ImageIndex","", new { @class="uback"})</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <th>Tên ảnh</th>
+            <td>@Html.TextBoxFor(model => model.Name, new { @class="text"})@Html.ValidationMessageFor(m=>m.Name)</td>
+        </tr>
+        <tr>
+            <th>Ảnh</th>
+           <td>@Html.TextBoxFor(model => model.Source, new { @class="text"})<input id="SelectImages" type="button" value="Chọn ảnh" class="bottom" /></td>
+        </tr>
+        <tr>
+            <th>Độ rộng của ảnh</th>
+            <td>@Html.TextBoxFor(model => model.Width, new { @class = "text" })@Html.ValidationMessageFor(m => m.Width)</td>
+        </tr>
+
+        <tr>
+            <th>Chiều cao của ảnh</th>
+            <td>@Html.TextBoxFor(model => model.Height, new { @class = "text" })@Html.ValidationMessageFor(m => m.Height)</td>
+        </tr>
+        <tr>
+            <th>Thứ tự</th>
+            <td>@Html.TextBoxFor(model => model.Orders, new { @class = "text" })</td>
+        </tr>
+
+        <tr>
+            <th>Link ảnh</th>
+            <td>@Html.TextBoxFor(model => model.Link, new { @class = "text" })</td>
+        </tr>
+
+
+        @*<tr>
+            <th>Kích hoạt</th>
+           <td>@Html.CheckBox(model => model.Active)</td>
+        </tr>*@
+
+        <tr>
+            <th>Target của ảnh</th>
+            <td>@Html.DropDownList("sslTarget","==Chọn target==" )</td>
+        </tr>
+
+        <tr>
+            <th>Vị trí của ảnh</th>
+            <td>
+                @Html.DropDownList("sllPossition", "==Chọn vị trí==")
+            
+        </td>
+    </tr>
+         <tr>
+            <th>Mô tả chi tiết</th>
+            <td>@Html.TextArea("Description")</td>
+        </tr>
+        <tr>
+            <th>Thuộc tính Alt</th>
+            
+            <td>@Html.TextBoxFor(model => model.Alternative, new { @class = "text" })</td>
+            
+        </tr>
+
+        <tr>
+            <td class="Control" colspan="2"> 
+                <ul>
+                        <li><input type="submit" value="Ghi lại "class="uupdate" /></li>
+                    <li>@Html.ActionLink("Trở về", "ImageIndex","", new { @class="uback"})</li>
+                </ul>
+            </td>
+        </tr>
+
+
+    </table>
+    
+}
+<script>
+    $(function () {
+        $("#SelectImages").click(function () {
+            var finder = new CKFinder();
+            finder.selectActionFunction = function (fileUrl) {
+                $("#Image").val(fileUrl);
+            };
+            finder.popup();
+        });
+    });
+</script>
+
+<script type="text/javascript">
+    var editor;
+    function createEditor(languageCode, id) {
+        var editor = CKEDITOR.replace(id, {
+            language: languageCode
+        });
+    }
+
+    $(function () {
+        createEditor('vi', 'Content');
+        createEditor('vi', 'Detail');
+    });
+</script>

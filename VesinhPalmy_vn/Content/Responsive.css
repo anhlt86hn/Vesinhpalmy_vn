@@ -1,0 +1,60 @@
+﻿/* CSS Global Responsive */
+@media screen and (max-width:1066px) {   
+}
+
+@media screen and (max-width:960px) {      
+    #menu, #pretty-menu {display:none;}	
+    .responsive-navigation, #main-menu {display:block;}
+	.slicknav_menu 
+    {
+        width:100%;
+		display:block;
+         position:fixed;
+        top:0;
+        z-index:200;
+	}    
+     .header {width:100%;} 
+   .header-wrapper {width:100%;}
+   #shadow-left-image {width:100%;}
+   /*#logo {width:100%;}*/
+   .logo-home {width:100%;}
+   /*.logo-home,*/ #logo-image {width:100%;}
+    
+    .title-link 
+    {
+        height:100%;
+        display:table;
+        margin-bottom:5px;
+        border: 1px solid rgb(215, 215, 215);
+    }
+.box-thumbnail, .box-thumbnail img {width:100%;margin:0;}
+   .footer, .top-footer {width:100%;}
+  /* For mobile phones: */[class*="col-"] {width: 100%;}
+}
+
+@media only screen and (max-width: 960px) {
+}
+
+@media only screen and (max-width:768px) {
+}
+
+@media only screen and (max-width:640px) {
+
+}
+
+@media screen and (max-width:540px) {
+
+}
+
+@media only screen and (max-width:480px) {
+}
+
+@media screen and (max-width:320px) {
+     
+}
+
+@media only screen and (max-width:320px) {
+}
+
+
+

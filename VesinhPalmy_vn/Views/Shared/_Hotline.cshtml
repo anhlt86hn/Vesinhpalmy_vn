@@ -1,0 +1,59 @@
+﻿<div id="hotline" style="height:94px;">
+    <div id="hotline-wrapper">
+        <div id="hotline-detail">
+            <div id="hotline-title">
+                <ul id="hotline-close-btn">
+                    <li id="hide" style="display:inline;">
+                        <a class="min" title="" href="javascript:clickhide();">Ẩn</a>
+                    </li>
+                    <li id="show" style="display:none;">
+                        <a class="max" title="" href="javascript:clickshow();">Xem</a>
+                    </li>
+                </ul>
+                Tư vấn online: 01682 911 911/01678 911 888
+            </div>
+            <div id="hotline-content">
+                <div id="hotline-number">
+                    01682 911 911
+                    01678 911 888
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        bottomLayer = document.getElementById('hotline');
+        var IntervalId = 0;
+        var maxHeight = 92;//Chieu cao khung quang cao
+        var minHeight = 20;
+        var curHeight = 0;
+        function show() {
+            curHeight += 2;
+            if (curHeight > maxHeight) {
+                clearInterval(IntervalId);
+            }
+            bottomLayer.style.height = curHeight + 'px';
+        }
+        function hide() {
+            curHeight -= 3;
+            if (curHeight < minHeight) {
+                clearInterval(IntervalId);
+            }
+            bottomLayer.style.height = curHeight + 'px';
+        }
+        IntervalId = setInterval('show()', 5);
+        function clickhide() {
+            document.getElementById('hide').style.display = 'none';
+            document.getElementById('show').style.display = 'inline';
+            IntervalId = setInterval('hide()', 5);
+        }
+        function clickshow() {
+            document.getElementById('hide').style.display = 'inline';
+            document.getElementById('show').style.display = 'none';
+            IntervalId = setInterval('show()', 5);
+        }
+        function clickclose() {
+            document.body.style.marginBottom = '0px';
+            bottomLayer.style.display = 'none';
+        }
+    </script>
+</div>

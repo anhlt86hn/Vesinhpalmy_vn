@@ -1,0 +1,129 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" /> @* Encoding Information HTML5*@
+    <meta http-equiv="content-language" content="vi" />
+    <title>@ViewBag.Title</title>
+    <meta name="description" content="@ViewBag.des" />
+    <meta name="keywords" content="@ViewBag.key" />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Dịch vụ Vệ Sinh Công Nghiệp chuyên nghiệp | Palmy Vietnam" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="alternate" href="http://vesinhpalmy.vn" hreflang="vi-vn" media="handheld" />
+    <link rel="canonical" href="http://vesinhpalmy.vn" />
+    <link href="https://plus.google.com/+LuongAnh86" rel="author" />
+    <link rel="publisher" href="https://plus.google.com/+LuongAnh86/about" />
+    <link rel="SHORTCUT ICON" href="~/Content/Images/icon-pm.png" type="image/x-icon" />
+    <link rel="icon" href="~/Content/Images/icon-pm.png" type="image/gif" />
+    
+    <!-- css -->
+    <link href="~/Content/Site.css" type="text/css" rel="stylesheet" />  
+    <link href="~/Content/Header.css" type="text/css" rel="stylesheet" />  
+    <link href="~/Content/Content.css" type="text/css" rel="stylesheet" />    
+    <link href="~/Content/Footer.css" type="text/css" rel="stylesheet" />
+    <link href="~/Content/sm-core-css.css" type="text/css" rel="stylesheet" />
+    <link href="~/Content/sm-blue.css" type="text/css" rel="stylesheet" /> 
+    <link href="~/Content/nivo-slider.css" type="text/css" rel="stylesheet" />
+    <link href="~/Content/slicknav.css" type="text/css" rel="stylesheet" />
+    <link href="~/Content/PagedList.css" type="text/css" rel="stylesheet" />  
+    <link href="~/Content/Responsive.css" type="text/css" rel="stylesheet" />  
+  
+    <!-- js -->
+    <script src="~/Scripts/modernizr.min.js"></script>
+    <script src="~/Scripts/jquery.min.js"></script>
+    <script src="~/Scripts/jquery.smartmenus.js"></script>
+    <script src="~/Scripts/jquery.slicknav.js"></script>
+    <script src="~/Scripts/jquery.nivo.slider.pack.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+   
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-56817224-2', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+    <script type="text/javascript">
+        $(function () {
+            $('body').append('<div id="backtotop"></div>');
+            $('body').append('<div id="big-daddy"></div>');
+            $(window).scroll(function () {
+                var $toa_do = $(window).scrollTop();
+                if ($toa_do == 0) { $('#backtotop').fadeOut(); }
+                else { $('#backtotop').fadeIn() };
+                if ($toa_do == 0) { $('#big-daddy').fadeOut(); }
+                else { $('#big-daddy').fadeIn() };
+            });
+            $('#backtotop').click(function () {
+                $('html,body').animate({ scrollTop: 0 }, 500);
+            });
+        });
+    </script>
+
+    <script>
+        $(function () {
+            $('#menu').smartmenus({
+                markCurrentItem: true,
+                subMenusSubOffsetX: 1,
+                subMenusSubOffsetY: -8
+            });
+        });
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#menu').slicknav();
+        });
+    </script>
+
+    @*<style>
+             body {
+           -webkit-touch-callout: none;
+           -webkit-user-select: none;
+           -moz-user-select: none;
+           -ms-user-select: none;
+           -o-user-select: none;
+            user-select: none;
+             }
+             </style>
+
+             <script type="text/JavaScript">
+                        function killCopy(e) {
+                            return false
+                        }
+                        function reEnable() {
+                            return true
+                        }
+                        document.onselectstart = new Function("return false")
+                        if (window.sidebar) {
+                            document.onmousedown = killCopy
+                            document.onclick = reEnable
+                        }
+            </script>
+
+            <script type="text/JavaScript">
+                        var message = "NoRightClicking"; function defeatIE() { if (document.all) { (message); return false; } } function defeatNS(e) { if (document.layers || (document.getElementById && !document.all)) { if (e.which == 2 || e.which == 3) { (message); return false; } } } if (document.layers) { document.captureEvents(Event.MOUSEDOWN); document.onmousedown = defeatNS; } else { document.onmouseup = defeatNS; document.oncontextmenu = defeatIE; } document.oncontextmenu = new Function("return false")
+            </script>
+
+            <script>
+        (function (d, s, id) {
+                    var js, fjs = d.getElementsByTagName(s)[0];
+                    if (d.getElementById(id)) return;
+                    js = d.createElement(s); js.id = id;
+                    js.src = "//connect.facebook.net/vi_VN/all.js#xfbml=1";
+                    fjs.parentNode.insertBefore(js, fjs);
+                }(document, 'script', 'facebook-jssdk'));
+            </script>
+    *@
+</head>
+<body>
+    @{Html.RenderPartial("~/Views/Shared/_SubHeader.cshtml");}
+    @RenderBody()
+    @{Html.RenderPartial("~/Views/Shared/_Hotline.cshtml");}
+    @{Html.RenderPartial("~/Views/Shared/_Footer.cshtml");}
+</body>
+</html>

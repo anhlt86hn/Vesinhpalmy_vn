@@ -1,0 +1,35 @@
+﻿@*<script type="text/javascript">
+    $(window).load(function () {
+        $('#promotion-slider').nivoSlider({ effect: 'random', pauseTime: 10000, directionNav: true, controlNav: false, pauseOnHover: false });
+    });
+</script>
+<div id="promotion-home" class="box-wrapper">
+    <h3 class="box-title">
+        <a href="@Html.Raw(ViewBag.CatLink)">
+            <span>@Html.Raw(ViewBag.CatName)</span>
+        </a>
+    </h3>
+    <div class="box-detail">
+        <div id="promotion-slider" class="nivoSlider" style="width: 100%; display: block; height: 225px;">
+            @Html.Raw(ViewBag.PromotionHome)
+        </div>
+    </div>
+    </div>*@
+
+<script type="text/javascript">
+    $(window).load(function () {
+        $('#slider_middle').nivoSlider({ effect: 'random', pauseTime: 10000, directionNav: true, controlNav: false, pauseOnHover: false });
+    });
+</script>
+<div id="promotion-home" class="box-wrapper">
+    <h3 class="box-title">
+        <a href="@Html.Raw(ViewBag.CatLink)">
+            <span>@Html.Raw(ViewBag.CatName)</span>
+        </a>
+    </h3>
+    <div class="box-detail">
+        <div id="slide">
+            @Html.Raw(ViewBag.PromotionHome)
+        </div>
+    </div>
+    </div>

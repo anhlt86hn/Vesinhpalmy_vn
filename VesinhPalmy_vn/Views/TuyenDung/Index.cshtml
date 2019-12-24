@@ -1,0 +1,62 @@
+﻿@using PagedList.Mvc;
+@using PagedList;
+
+@using VesinhPalmy_vn.Models;
+@model PagedList.IPagedList<VesinhPalmy_vn.Models.Menu>
+
+
+@{
+    ViewBag.Title = @Html.Raw(ViewBag.tit);
+    ViewBag.des = @Html.Raw(ViewBag.des);
+    ViewBag.key = @Html.Raw(ViewBag.key);
+    Layout = "~/Views/Shared/_SubLayout.cshtml";
+}
+
+<div class="row container-wrapper">
+    @{Html.RenderAction("_Headline", "MainPartialView");}
+    <div class="col-2">
+</div>
+    <div class="col-5 content-wrapper">
+        <div class="box-wrapper">
+            <div class="title-link">
+                <ul>
+                    <li class="SecondLast"><a href='/'><i class="icon-home" style="font-size: 14px;"></i>Trang chủ</a></li>
+                    <li class="Last"><a href='@Html.Raw(ViewBag.MenuLink)'>@Html.Raw(ViewBag.MenuName)</a></li>
+                </ul>
+            </div>
+            <div class="box-detail">
+                @for (int i = 0; i < Model.Count; i++)
+{
+    <div class="box-wrapper child">
+        <h3 class="box-title">
+            <a href="/tuyen-dung/@Model[i].Tag">
+                <span>@Model[i].Name</span>
+            </a>
+        </h3>
+        <div class="box-detail">
+            <div class="box-thumbnail child">
+                <img src="@Model[i].Image" alt="@Model[i].Name" />
+            </div>
+            <div class="box-content child">
+                <p>
+                    @Html.Raw(@Model[i].Content)
+                </p>
+            </div>
+        </div>
+    </div>
+}
+                <div class="paged-list">
+                    @Html.PagedListPager(Model, page => Url.Action("Index", "TuyenDung", new { page = page }), (PagedListRenderOptions)ViewBag.ship)
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="col-3 sidebar-wrapper">     
+            @{Html.RenderAction("_RecruitmentList", "MainPartialView");}
+            @{Html.RenderAction("_Tips5", "MainPartialView");}
+    </div>
+    <div class="col-2"></div>
+</div>

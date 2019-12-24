@@ -1,0 +1,273 @@
+﻿/*------------------------------------------------------------------------------------------------------------------------------------------------------
+HEADER CSS
+version:1.0
+date:8/8/2015       
+author: luonganh@gmail.com
+email: luonganh@gmail.com
+website: vesinhpalmy.vn     
+-------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+.header
+{
+    position:relative;
+    margin:0;
+    padding:0;
+    z-index:120;
+    background: transparent none repeat scroll 0% 0%;
+     /*background:url(images/bg-header.png);*/
+    border-bottom: 1px solid #E5E5E5;
+}
+
+.responsive-navigation
+{
+    display:none;
+    width:100%;
+    height:3.375em;
+    height:53px;
+}
+
+.header-wrapper
+{
+ margin: 0px auto;
+padding: 0px;
+width: 100%;
+z-index: 1;
+position: relative;
+/*min-width:1035px;*/
+}
+
+#shadow-left-image
+{  
+    position:absolute;
+    z-index:1;
+    left:0;
+    top:0;
+     width:770px;
+     height:265px;
+     /*width:auto;
+     height:auto;*/
+     margin:0;
+     padding:0;
+}
+
+
+/*.shadow-left-image
+{  
+    position:absolute;
+    z-index:1;
+    left:0;
+    top:0;
+     width:770px;
+     height:265px;
+     margin:0;
+     padding:0;
+   background: transparent url("images/shadow-left.png") no-repeat scroll right bottom;
+}*/
+/*.center-header
+{
+max-width:1035px;
+margin:0 auto;
+z-index:2;
+position:relative;
+padding:0;
+}
+
+
+#logo
+{
+	text-align: center;
+	margin: 0 auto;
+    padding:0;
+    overflow:hidden;
+}*/
+
+.logo-home
+{
+
+text-align:center;
+width:100%;
+margin:0 auto;
+padding:0;
+padding-bottom:30px;
+background: transparent url("images/bg-header.png") repeat scroll 0% 0%;
+}
+
+.logo-home h1
+{
+margin:0;
+padding:0;
+font-weight:bold;
+}
+#logo-image
+{
+	text-align: center;
+	margin: 0 auto;
+    padding:0;
+    overflow:hidden;
+}
+
+#pretty-menu
+{
+    margin:0;
+    padding:0;
+    height:325px;
+	background: none;
+    background:#fff;
+}
+
+#nav_mmenu 
+{
+    margin:0;
+    padding:0;
+}
+
+#nav_mmenu_move
+{
+    margin:0;
+    padding:0;
+}
+
+.mmenu_inner 
+{
+    width:976px;
+    margin:0 auto;
+    padding:0;
+}
+
+.mmenu_box
+{
+    margin:0;
+    padding:0;
+    text-align: center;
+	position:absolute;
+	left:0px;
+	width:100%;
+	background: url(images/bg-menu.jpg) top center repeat-x;
+}
+
+.mmenu_box a 
+{
+	text-align: center;
+}
+
+.mmenu_box .mmenu_items:hover 
+{
+	z-index: 12;
+	top: 90px;
+	transition: all 400ms ease 100ms;
+}
+ 
+.mmenu_items 
+{
+	display:inline-block;
+	position:relative;
+	width:170px;
+	height:260px;
+    text-align:center;
+	transition: all 400ms ease 100ms;
+}
+
+.mmenu_items_pad 
+{
+    margin:0;
+    padding:0;
+	position:absolute;
+    text-align:center;
+	width:226px;
+	left:-45px;
+	padding: 10px;
+	background: url(images/bg-main-menu.png) top center no-repeat;
+    border-radius:5px;
+    box-sizing:border-box;
+}
+
+.mmenu_img 
+{
+    margin:0;
+    padding:0;
+    text-align:center;
+	height: 115px;
+	width: 206px;
+}
+
+.mmenu_img img 
+{
+	display: none;
+}
+
+.mmenu_img table
+{
+    text-align:center;
+}
+
+.mmenu_name 
+{
+
+    margin:0;
+	padding: 5px 0;
+}
+
+.mmenu_name a 
+{
+      font-weight:bold;
+     margin:0;
+	padding: 5px 0;
+	color: #fff;
+	font-family: "Courier New";
+	text-decoration: none;
+	text-transform: uppercase;
+    text-align:center;
+}
+
+.mmenu_name h2
+{
+    font-size:1.8em;
+      margin:0;
+	padding: 5px 0;
+}
+
+.mmenu_box .span 
+{
+	display: inline-block;
+}
+
+.mmenu_box .mmenu_items:hover .mmenu_items_pad .mmenu_img img 
+{
+	display: block;
+}
+.mmenu_box .mmenu_items:hover .mmenu_name a 
+{
+    color:#FFFF00;
+}
+
+.shadow_menu 
+{
+	position: absolute;
+	background: url(images/shadow-menu.png) top center no-repeat;
+	width: 290px;
+	height: 85px;
+	bottom: 16px;
+	left: -77px;
+	z-index: -1;
+}
+
+.mmenu_box .mid {
+	top: 30px;
+	z-index: 10;
+} 
+.mmenu_box .top {
+	top: 58px;
+	z-index: 11;
+} 
+.mmenu_box .behind {
+	top: 0;
+	z-index: 9;
+} 
+
+#main-menu, .slicknav_menu {display:none;}
+
+
+
+
+
+

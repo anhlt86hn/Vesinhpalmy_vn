@@ -1,0 +1,32 @@
+﻿@using PagedList.Mvc;
+@using PagedList;
+
+@using VesinhPalmy_vn.Models;
+@model PagedList.IPagedList<VesinhPalmy_vn.Models.News>
+
+@{
+    ViewBag.Title = @Html.Raw(ViewBag.tit);
+    ViewBag.des = @Html.Raw(ViewBag.des);
+    ViewBag.key = @Html.Raw(ViewBag.key);
+    Layout = "~/Views/Shared/_SubLayout.cshtml";
+}
+
+<div id="tips-home" class="box-wrapper">
+    <div class="box-title">
+        <ul>
+            <li>
+                <h3>
+                    <a href="/kien-thuc">
+                        <span>KIẾN THỨC VỆ SINH</span>
+                    </a>
+                </h3>
+            </li>
+        </ul>
+    </div>
+    <div class="box-detail">
+       @Html.Raw(ViewBag.NewList)
+        <div class="paged-list">
+            @Html.PagedListPager(Model, page => Url.Action("PagedList", "MainPartialView", new { page = page }), (PagedListRenderOptions)ViewBag.ship)
+        </div>
+    </div>
+</div>   

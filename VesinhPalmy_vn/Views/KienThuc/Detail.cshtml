@@ -1,0 +1,80 @@
+﻿@using PagedList.Mvc;
+@using PagedList;
+
+@using VesinhPalmy_vn.Models;
+@model PagedList.IPagedList<VesinhPalmy_vn.Models.News>
+
+@{
+    ViewBag.Title = @Html.Raw(ViewBag.tit);
+    ViewBag.des = @Html.Raw(ViewBag.des);
+    ViewBag.key = @Html.Raw(ViewBag.key);
+    Layout = "~/Views/Shared/_SubLayout.cshtml";
+}
+
+
+<div class="row container-wrapper">
+    @{Html.RenderAction("_Headline", "MainPartialView");}
+    <div class="col-2">
+    </div>
+    <div class="col-5 content-wrapper">
+        <div class="box-wrapper">
+            <div class="title-link">
+                <ul>
+                    <li><a href='/'><i class="icon-home" style="font-size: 14px;"></i>Trang chủ</a></li>
+                    <li class="SecondLast"><a href='@Html.Raw(ViewBag.MenuLink)'>@Html.Raw(ViewBag.MenuName)</a></li>
+                    <li class='Last'><a href="/kien-thuc/@Html.Raw(ViewBag.NewsLink)">@Html.Raw(ViewBag.NewsName)</a></li>
+                </ul>
+            </div>
+            <h3 class="box-title no-link"><span>@Html.Raw(ViewBag.NewsName)</span></h3>
+            <div class="box-detail">
+                <div class="box-thumbnail">
+                    <img src='@Html.Raw(ViewBag.NewsImage)' alt='@Html.Raw(ViewBag.NewsName)' />
+                </div>
+                <div class="box-content">
+                    <p> @Html.Raw(ViewBag.NewsContent)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-3 sidebar-wrapper">
+        <div id="tips-home" class="box-wrapper">
+            <h3 class="box-title no-link">
+                <span>CÁC BÀI VIẾT CÙNG DANH MỤC</span>
+            </h3>
+            <div class="box-detail">
+                <ul class="box-list">
+                    @for (int i = 0; i < Model.Count; i++)
+                    {
+                        if (Request.Url.ToString().IndexOf(Model[i].Tag) > 0)
+                        {
+                            <li class="current">
+                                <span class="list_active"></span>
+                                <a href="/kien-thuc/@Model[i].Tag" class="current">
+
+                                    <span>@Model[i].Name</span>
+                                </a><div class="clear"></div>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="last">
+                                <span class="list_active"></span>
+
+                                <a href="/kien-thuc/@Model[i].Tag" class="last">
+                                    <span>@Model[i].Name</span>
+                                </a><div class="clear"></div>
+                            </li>
+                        }
+                    }
+                </ul>
+                <div class="paged-list">
+                    @Html.PagedListPager(Model, page => Url.Action("Index", "KienThuc", new { page = page }), (PagedListRenderOptions)ViewBag.ship)
+                </div>
+            </div>
+        </div>
+        @{Html.RenderAction("_PromotionList", "MainPartialView");}
+    </div>
+    <div class="col-2">
+    </div>
+</div>

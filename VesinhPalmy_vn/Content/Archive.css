@@ -1,0 +1,237 @@
+﻿.block {
+    width: 100%;
+    display:block;
+    margin:0;
+    padding:0;
+}
+
+.a-block {
+    display: inline;
+    float: left;
+    margin:0;
+    position: relative;
+    text-decoration: none;
+    height: 100%;
+    overflow: hidden;
+}
+/*a:link, a:visited {
+    color: #176093;
+    text-decoration: none;
+}*/
+.block .a-block:link, .block .a-block:visited {
+    color:yellow;
+
+}
+
+.block-img
+{
+    width:320px;
+    height:auto;
+}
+
+.a-block img {
+    display: inline;
+    float: left;
+}
+
+.a-block .txt-holder {
+    bottom: 0px;
+    cursor: pointer;
+    left: 0px;
+    position: absolute;
+    width: 100%;
+}
+
+.a-block .txt-holder p {
+    color: #FFF;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 15px;
+    line-height: 16px;
+    padding: 8px 10px;
+    position: relative;
+    text-decoration: none;
+    margin:0;
+}
+.a-block .txt-holder p:hover {
+    color: #AAA;
+}
+
+.a-block .txt-holder p .txts {
+    position: relative;
+    z-index: 10;
+}
+.a-block .txt-holder p .bg {
+    background: #003350 none repeat scroll 0px 0px;
+    border: 0px none;
+    bottom: 0px;
+    height: 100%;
+    left: 0px;
+    opacity: 0.6;
+    position: absolute;
+    width: 100%;
+}
+
+.a-block .txt-holder .timestamp, .block .a-block .txt-holder .badge {
+        border: 0px none;
+        color: #DDD;
+        font-size: 10px;
+        line-height: 20px;
+        padding: 0px 10px;
+        position: absolute;
+        text-transform: uppercase;
+        top: -20px;
+    }
+
+.a-block .txt-holder .timestamp .txts, .block .a-block .txt-holder .badge .txts {
+    font-family: georgia,serif;
+    position: relative;
+    z-index: 10;
+}
+
+.a-block .txt-holder .timestamp .bg {
+    background: #49853E none repeat scroll 0px 0px;
+    border: 0px none;
+    bottom: 0px;
+    height: 100%;
+    left: 0px;
+    opacity: 0.6;
+    position: absolute;
+    width: 100%;
+}
+.tips-home
+{
+    position: relative;
+    vertical-align: top;
+    width:100%;
+    float:left;
+    display:block;
+    padding:5px;
+    margin:0 auto;
+    background: none repeat scroll 0% 0% #FFF;
+    font-size:12px;
+    font-weight:bold;
+}
+
+.tips-home-wrapper ul
+{
+    list-style:none;
+    margin:5px 0;
+    padding:0;
+}
+
+.tips-home-wrapper ul li:hover .list_active, .tips-home-wrapper ul li.current .list_active {
+    margin-left: -5px;
+    width: 5px;
+    min-height: 43px;
+    height: 100%;  
+    display: block;
+    float: left;
+    background: url("images/line-active.gif") repeat-y scroll left center transparent;
+}
+
+.tips-home-wrapper ul li a.current {
+    background: none repeat scroll 0% 0% #F5F5F5;
+    border-bottom: 1px solid #DCDCDC;
+    border-bottom: 1px solid #DDD;
+}
+
+.tips-home-wrapper ul li a 
+{
+	display:block;
+	padding: 12px 0;
+	color: #333333;
+	padding-left: 10px;
+	text-decoration: none;
+	border-bottom: 1px solid #DCDCDC;
+}
+
+.tips-home-wrapper ul li a:hover, .tips-home-wrapper ul li a.current 
+{
+	background: #f5f5f5;
+	border-bottom: 1px solid #dcdcdc;
+}
+
+.r-pagedlist
+{
+    width:110px;
+    display:table;
+    margin:10px auto;
+    margin-bottom:0;
+    padding:0;
+}
+
+/* == Bottom Right == */
+.bottom-right
+{
+    /*position: absolute;
+    top:0;*/
+    z-index: 2;
+   width:100%;
+   display:block;
+    height:171px;
+    padding:0;
+    position:relative;
+    float:left;
+    background: url("images/bg-box-sidebar.png") no-repeat scroll left bottom transparent;   
+}
+
+.bottom-right-desc
+{
+    margin-top:5px;
+    padding:0;
+    color: #666;
+    font-size: 14px;
+    line-height: 16px;
+    padding:10px 20px 0 50px;
+    font-family: "Courier New";
+    text-align:justify;
+}
+
+.bottom-right-support
+{
+    width:230px;
+}
+
+.bottom-right-support-left {
+    float: left;
+    width: 70px;
+    /*padding-bottom: 4px;*/
+    padding:0;
+    position:absolute;
+    bottom:10px;
+    left:13px;
+}
+
+.bottom-right-support-left-yahoo {
+    height:25px;
+    padding: 0;  
+}
+
+.bottom-right-support-left-skype {
+    height:25px;
+    padding: 0;  
+}
+
+.bottom-right-support-right {
+    float: left;
+    width: 150px;
+    /*width:120px;*/
+   padding-top:12px;
+}
+
+.bottom-right-support-right-hotline {
+    padding:0;
+    color: #000;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 20px;
+    background: url("images/icon-hotline.png") no-repeat scroll 5px center transparent;
+}
+
+.bottom-right-support-right-hotline span
+{
+    position:absolute;
+    bottom:20px;
+    right:50px;
+    padding-left:37px;
+}

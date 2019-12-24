@@ -1,0 +1,25 @@
+﻿@using System
+@using System.Configuration
+@using System.Data
+@using VesinhPalmy_vn.Models
+
+<div class="row header">
+    <div class="responsive-navigation">
+    </div>
+    <div class="header-wrapper">
+        <div class="logo-home" style="padding-bottom:65px;">
+            <h1><img id="logo-image" src="~/Content/Images/logo-palmy-vietnam.png" /></h1>
+        </div>
+        <div class="clear"></div>
+            <div id="main-menu" style="display:block;max-width:1035px;margin:0 auto;z-index:16;">
+                <ul id="menu" class="sm sm-blue">
+                    @{Html.RenderAction("_MainMenu", "MainPartialView");}
+                </ul>
+            </div>
+    </div>
+    <div class="shadow-left-image"></div>
+    <div class="clear"></div>
+</div>
+       
+            
+

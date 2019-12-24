@@ -1,0 +1,42 @@
+﻿@using PagedList.Mvc;
+@using PagedList;
+
+@using VesinhPalmy_vn.Models;
+
+@{
+    ViewBag.Title = @Html.Raw(ViewBag.tit);
+    ViewBag.des = @Html.Raw(ViewBag.des);
+    ViewBag.key = @Html.Raw(ViewBag.key);
+    Layout = "~/Views/Shared/_SubLayout.cshtml";
+}
+
+<div class="row container-wrapper">
+    @{Html.RenderAction("_Headline", "MainPartialView");}
+    <div class="col-2">
+    </div>
+    <div class="col-5 content-wrapper">
+        <div class="box-wrapper">
+            <div class="title-link">
+                <ul>
+                    <li><a href='/'><i class="icon-home" style="font-size: 14px;"></i>Trang chủ</a></li>
+                    <li class="SecondLast"><a href='@Html.Raw(ViewBag.RootMenuLink)'>@Html.Raw(ViewBag.RootMenuName)</a></li>
+                    <li class='Last'><a href='@Html.Raw(ViewBag.MenuLink)'>@Html.Raw(ViewBag.MenuName)</a></li>
+                </ul>
+            </div>
+            <h3 class="box-title no-link"><span>@Html.Raw(ViewBag.MenuName)</span></h3>
+            <div class="box-detail">              
+                <div class="box-content">
+                    <p>
+                        @Html.Raw(ViewBag.MenuContent)
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-3 sidebar-wrapper">
+        @{Html.RenderAction("_RecruitmentList", "MainPartialView");}
+        @{Html.RenderAction("_Tips10", "MainPartialView");}
+    </div>
+    <div class="col-2">
+    </div>
+</div>

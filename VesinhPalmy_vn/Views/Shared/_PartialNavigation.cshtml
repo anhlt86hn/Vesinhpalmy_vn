@@ -1,0 +1,355 @@
+﻿<div class="boder_menu">
+    <div id="menu">
+        <ul>        
+                @if (Request.Cookies["Username"].Values["Permiss"].ToString() == "0")
+                {
+            <li>
+                <a class="TopMenuItem" href="javascript:;">
+                    <span class="MenuText"><i class="icon-cogs"></i>CẤU HÌNH</span>
+                </a>
+                <ul>
+                    <li class="SubFirst">
+                        <a href="../../Admins/ConfigEditot/">
+                            <span class="SubMenuText">
+                                Cấu hình
+                            </span>
+                        </a>
+                    </li>
+                                     
+                    @*<li class="SubFirst">
+                        <a href="../../Advertise/AdvertiseIndex/">
+                            <span class="SubMenuText">
+                                Quảng cáo
+                            </span>
+                        </a>
+                    </li>*@
+
+                </ul>
+            </li>
+            
+            <li>
+                <a class="TopMenuItem" href="javascript:;">
+                    <span class="MenuText"><i class="icon-globe"></i>MENU</span>
+                </a>
+                <ul>
+                    <li class="SubFirst">
+                        <a href="../../Menu/MenuIndex/">
+                            <span class="SubMenuText">
+                                MENU
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+                   
+            <li>
+                <a class="TopMenuItem" href="javascript:;">
+                    <span class="MenuText"><i class="icon-tags"></i>ẢNH</span>
+                </a>
+                <ul>
+                    <li class="SubFirst">
+                        <a href="../../Image/ImageIndex/">
+                            <span class="SubMenuText">
+                                Ảnh
+                            </span>
+                        </a>
+                    </li>      
+                </ul>
+            </li>
+                                                                                           
+            <li>
+                <a class="TopMenuItem" href="javascript:;">
+                    <span class="MenuText"><i class="icon-globe"></i>TIN BÀI</span>
+                </a>
+                <ul>
+                    <li class="SubFirst">
+                        <a href="../../GroupNew/GroupNewIndexot/">
+                            <span class="SubMenuText">
+                                Nhóm tin bài
+                            </span>
+                        </a>
+                    </li>
+                    <li class="SubFirst">
+                        <a href="../../News/NewsIndexot">
+                            <span class="SubMenuText">
+                                Tin bài
+                            </span>
+                        </a>
+                    </li>
+
+                </ul>
+            </li>
+                    
+            @*<li>
+                <a class="TopMenuItem" href="javascript:;">
+                    <span class="MenuText"><i class="icon-tags"></i>KHÁCH HÀNG</span>
+                </a>
+                <ul>                   
+                    <li class="SubFirst">
+                        <a href="../../Customer/CustomerIndexot/">
+                            <span class="SubMenuText">
+                                Khách hàng
+                            </span>
+                        </a>
+                    </li>
+                  
+                </ul>
+            </li>*@
+                    
+            <li>
+                <a class="TopMenuItem" href="javascript:;">
+                    <span class="MenuText"><i class="icon-th-large"></i>THÀNH VIÊN</span>
+                </a>
+                <ul>
+                    <li class="SubFirst">
+                        <a href="../../Member/MemberIndex/">
+                            <span class="SubMenuText">
+                                Thành viên
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+           
+            @*<li>
+                <a class="TopMenuItem" href="javascript:;">
+                    <span class="MenuText"><i class="icon-signin"></i>HỖ TRỢ</span>
+                </a>
+                <ul>
+                    <li class="SubFirst">
+                        <a href="../../GroupSupport/GroupSupportIndex/">
+                            <span class="SubMenuText">
+                                Nhóm hỗ trợ
+                            </span>
+                        </a>
+                    </li>
+                    <li class="SubFirst">
+                        <a href="../../Support/SupportIndex/">
+                            <span class="SubMenuText">
+                                Hỗ trợ
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </li>*@   
+            }
+            @if (Request.Cookies["Username"].Values["Permiss"].ToString() == "1")
+            {
+               <li>
+                <a class="TopMenuItem" href="javascript:;">
+                    <span class="MenuText"><i class="icon-cogs"></i>CẤU HÌNH</span>
+                </a>
+                <ul>
+                    <li class="SubFirst">
+                        <a href="../../Admins/ConfigEditot/">
+                            <span class="SubMenuText">
+                                Cấu hình
+                            </span>
+                        </a>
+                    </li>
+                                     
+                    @*<li class="SubFirst">
+                        <a href="../../Advertise/AdvertiseIndex/">
+                            <span class="SubMenuText">
+                                Quảng cáo
+                            </span>
+                        </a>
+                    </li>*@
+
+                </ul>
+            </li>
+                  <li>
+                <a class="TopMenuItem" href="javascript:;">
+                    <span class="MenuText"><i class="icon-tags"></i>ẢNH</span>
+                </a>
+                <ul>
+                    <li class="SubFirst">
+                        <a href="../../Image/ImageIndex/">
+                            <span class="SubMenuText">
+                                Ảnh
+                            </span>
+                        </a>
+                    </li>      
+                </ul>
+            </li>
+                                                                                           
+            <li>
+                <a class="TopMenuItem" href="javascript:;">
+                    <span class="MenuText"><i class="icon-globe"></i>TIN BÀI</span>
+                </a>
+                <ul>
+                    <li class="SubFirst">
+                        <a href="../../GroupNew/GroupNewIndexot/">
+                            <span class="SubMenuText">
+                                Nhóm tin bài
+                            </span>
+                        </a>
+                    </li>
+                    <li class="SubFirst">
+                        <a href="../../News/NewsIndexot">
+                            <span class="SubMenuText">
+                                Tin bài
+                            </span>
+                        </a>
+                    </li>
+
+                </ul>
+            </li>
+                    
+            @*<li>
+                <a class="TopMenuItem" href="javascript:;">
+                    <span class="MenuText"><i class="icon-tags"></i>KHÁCH HÀNG</span>
+                </a>
+                <ul>                   
+                    <li class="SubFirst">
+                        <a href="../../Customer/CustomerIndexot/">
+                            <span class="SubMenuText">
+                                Khách hàng
+                            </span>
+                        </a>
+                    </li>
+                  
+                </ul>
+            </li>*@
+                    
+            <li>
+                <a class="TopMenuItem" href="javascript:;">
+                    <span class="MenuText"><i class="icon-th-large"></i>THÀNH VIÊN</span>
+                </a>
+                <ul>
+                    <li class="SubFirst">
+                        <a href="../../Member/MemberIndex/">
+                            <span class="SubMenuText">
+                                Thành viên
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+           
+            @*<li>
+                <a class="TopMenuItem" href="javascript:;">
+                    <span class="MenuText"><i class="icon-signin"></i>HỖ TRỢ</span>
+                </a>
+                <ul>
+                    <li class="SubFirst">
+                        <a href="../../GroupSupport/GroupSupportIndex/">
+                            <span class="SubMenuText">
+                                Nhóm hỗ trợ
+                            </span>
+                        </a>
+                    </li>
+                    <li class="SubFirst">
+                        <a href="../../Support/SupportIndex/">
+                            <span class="SubMenuText">
+                                Hỗ trợ
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </li>*@   
+            }
+            @if (Request.Cookies["Username"].Values["Permiss"].ToString() == "2")
+            {
+              <li>
+                <a class="TopMenuItem" href="javascript:;">
+                    <span class="MenuText"><i class="icon-cogs"></i>CẤU HÌNH</span>
+                </a>
+                <ul>
+                    <li class="SubFirst">
+                        <a href="../../Admins/ConfigEditot/">
+                            <span class="SubMenuText">
+                                Cấu hình
+                            </span>
+                        </a>
+                    </li>
+                                     
+                    @*<li class="SubFirst">
+                        <a href="../../Advertise/AdvertiseIndex/">
+                            <span class="SubMenuText">
+                                Quảng cáo
+                            </span>
+                        </a>
+                    </li>*@
+
+                </ul>
+            </li>
+                  <li>
+                <a class="TopMenuItem" href="javascript:;">
+                    <span class="MenuText"><i class="icon-tags"></i>ẢNH</span>
+                </a>
+                <ul>
+                    <li class="SubFirst">
+                        <a href="../../Image/ImageIndex/">
+                            <span class="SubMenuText">
+                                Ảnh
+                            </span>
+                        </a>
+                    </li>      
+                </ul>
+            </li>
+                                                                                           
+            <li>
+                <a class="TopMenuItem" href="javascript:;">
+                    <span class="MenuText"><i class="icon-globe"></i>TIN BÀI</span>
+                </a>
+                <ul>
+                    <li class="SubFirst">
+                        <a href="../../GroupNew/GroupNewIndexot/">
+                            <span class="SubMenuText">
+                                Nhóm tin bài
+                            </span>
+                        </a>
+                    </li>
+                    <li class="SubFirst">
+                        <a href="../../News/NewsIndexot">
+                            <span class="SubMenuText">
+                                Tin bài
+                            </span>
+                        </a>
+                    </li>
+
+                </ul>
+            </li>
+                    
+            @*<li>
+                <a class="TopMenuItem" href="javascript:;">
+                    <span class="MenuText"><i class="icon-tags"></i>KHÁCH HÀNG</span>
+                </a>
+                <ul>                   
+                    <li class="SubFirst">
+                        <a href="../../Customer/CustomerIndexot/">
+                            <span class="SubMenuText">
+                                Khách hàng
+                            </span>
+                        </a>
+                    </li>
+                  
+                </ul>
+            </li>*@
+                               
+            @*<li>
+                <a class="TopMenuItem" href="javascript:;">
+                    <span class="MenuText"><i class="icon-signin"></i>HỖ TRỢ</span>
+                </a>
+                <ul>
+                    <li class="SubFirst">
+                        <a href="../../GroupSupport/GroupSupportIndex/">
+                            <span class="SubMenuText">
+                                Nhóm hỗ trợ
+                            </span>
+                        </a>
+                    </li>
+                    <li class="SubFirst">
+                        <a href="../../Support/SupportIndex/">
+                            <span class="SubMenuText">
+                                Hỗ trợ
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </li>*@   
+            }
+        </ul>
+    </div>
+</div>

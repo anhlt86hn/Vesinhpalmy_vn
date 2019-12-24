@@ -1,0 +1,118 @@
+﻿@using PagedList.Mvc;
+@using PagedList;
+
+@using VesinhPalmy_vn.Models;
+@model PagedList.IPagedList<VesinhPalmy_vn.Models.Menu>
+
+
+@{
+    ViewBag.Title = @Html.Raw(ViewBag.tit);
+    ViewBag.des = @Html.Raw(ViewBag.des);
+    ViewBag.key = @Html.Raw(ViewBag.key);
+    Layout = "~/Views/Shared/_SubLayout.cshtml";
+}
+
+<div id="fb-root"></div>
+<script>
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/vi_VN/all.js#xfbml=1&appId=429741320382398";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+<script>
+    $(function () {
+        $(".tabs").tabs({
+            event: "mouseover"
+        });
+    });
+</script>
+
+<script type="text/javascript">
+    $(".tabs ul li:first").addClass("active");
+    $(".tabs div:gt(0)").hide();
+    $(".tabs ul li").click(function () {
+        $(".tabs ul li").removeClass('active');
+        //var current_index = $(this).index(); // Sử dụng cho jQuery >= 1.4.x
+        var current_index = $(".tabs ul li").index(this);
+        $(".tabs ul li:eq(" + current_index + ")").addClass("active");
+        $(".tabs div").hide();
+        $(".tabs div:eq(" + current_index + ")").fadeIn(100);
+    });
+</script>
+
+<script type="text/javascript">
+    window.___gcfg = { lang: 'vi' };
+
+    (function () {
+        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+        po.src = 'https://apis.google.com/js/platform.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+    })();
+</script>
+
+<script src="https://apis.google.com/js/plusone.js"> </script>
+<script> gapi.comments.render('comments', { href: window.location, width: '564', first_party_property: 'BLOGGER', view_type: 'FILTERED_POSTMOD' }); </script>
+<script> gapi.commentcount.render('commentscounter', { href: window.location }); </script>
+
+<div class="hotline">
+    @{Html.RenderAction("_Hotline", "MainPartialView");}
+</div>
+<div id="container">
+    <div id="content">
+
+        <div class="box-wrapper">
+            <div class="title-link">
+                <ul>
+                    <li class="SecondLast"><a href='/'><i class="icon-home" style="font-size: 14px;"></i>Trang chủ</a></li>
+                    <li class="Last"><a href='@Html.Raw(ViewBag.MenuLink)'>@Html.Raw(ViewBag.MenuName)</a></li>
+                </ul>
+            </div>
+            <div class="box-detail">
+                @for (int i = 0; i < Model.Count; i++)
+                {
+                    <div class="child-box-wrapper">
+                        <div class="box-title">
+                            <ul>
+                                <li>
+                                    <h3>
+                                        <a href="/quy-trinh/@Model[i].Tag">
+                                            <span>@Model[i].Name</span>
+                                        </a>
+                                    </h3>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="child-box-detail">
+                            <div class="box-thumbnail">
+                                <img src="@Model[i].Image" alt="@Model[i].Name" />
+                            </div>
+                            <div class="child-box-content">
+                                <p>
+                                    @Html.Raw(@Model[i].Content)
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                }
+                <div class="paged-list">
+                    @Html.PagedListPager(Model, page => Url.Action("Index", "QuyTrinh", new { page = page }), (PagedListRenderOptions)ViewBag.ship)
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div id="sidebar">
+        <div id="process-list" class="box-wrapper">
+            @{Html.RenderAction("_ProcessList", "MainPartialView");}
+        </div>
+        <div id="tips-home" class="box-wrapper">
+            @{Html.RenderAction("_TipsHome", "MainPartialView");}
+        </div>
+    </div>
+
+</div>

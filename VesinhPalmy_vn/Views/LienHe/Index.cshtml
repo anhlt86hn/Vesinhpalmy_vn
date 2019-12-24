@@ -1,0 +1,135 @@
+﻿@using PagedList.Mvc;
+@using PagedList;
+
+@using VesinhPalmy_vn.Models;
+@model PagedList.IPagedList<VesinhPalmy_vn.Models.Menu>
+
+@{
+    ViewBag.Title = @Html.Raw(ViewBag.tit);
+    ViewBag.des = @Html.Raw(ViewBag.des);
+    ViewBag.key = @Html.Raw(ViewBag.key);
+    Layout = "~/Views/Shared/_SubLayout.cshtml";
+}
+
+<div class="row container-wrapper">
+    @{Html.RenderAction("_Headline", "MainPartialView");}
+    <div class="col-2"></div>
+    <div class="col-5 content-wrapper">
+        <div class="box-wrapper">
+            <div class="title-link">
+                <ul>
+                    <li class="SecondLast"><a href='/'><i class="icon-home" style="font-size: 14px;"></i>Trang chủ</a></li>
+                    <li class="Last"><a href='/lien-he'>Liên hệ</a></li>
+                </ul>
+            </div>
+            <h3 class="box-title no-link"><span>@Html.Raw(ViewBag.MenuName)</span></h3>     
+            <div class="box-detail">
+                <div id="boxContact">
+                    <div id="infoDealer" class="infoContact">
+                        <div class="info_dealer">
+                            <div class="info-title">
+                                <h4 style="line-height: 30px; font-size: 20px; padding-bottom: 15px; font-family: customFont; word-spacing: 5px;">
+                                    <span class="contact-title">
+                                        CÔNG TY TNHH ĐẦU TƯ VÀ THƯƠNG MẠI PALMY VIETNAM
+                                    </span><br>
+                                    <span style="font-family: sans-serif, Arial, Verdana, 'Trebuchet MS'; font-size: 13px; line-height: 1.6em;">PHẠM VI LÀM VIỆC HÀ NỘI</span>
+                                </h4>
+                            </div>
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <tbody>
+                                    <tr>
+                                        <td width="35"><img alt="Address Image" src="@Html.Raw(ViewBag.AddressImage)" style="width: 25px; height: 25px;"></td>
+                                        <td width="500">P911 tòa nhà Golden Land, 275 Nguyễn Trãi, Thanh Xuân, Hà Nội</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="35"><img alt="Email Image" src="@Html.Raw(ViewBag.EmailImage)" style="width: 25px; height: 22px;"></td>
+                                        <td width="500">
+                                            Mail : palmyvn@gmail.com
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><img alt="" src="@Html.Raw(ViewBag.PhoneImage)" style="width: 25px; height: 27px;"></td>
+                                        <td>
+                                            <font color="#666666" face="arial">
+                                                <span style="font-size: 12px; line-height: 18px;"><span class="skype_c2c_print_container notranslate"></span></span>
+                                                <span id="skype_c2c_container" class="skype_c2c_container notranslate" dir="ltr" tabindex="-1" onmouseover="SkypeClick2Call.MenuInjectionHandler.showMenu(this, event)" onmouseout="SkypeClick2Call.MenuInjectionHandler.hideMenu(this, event)" onclick="SkypeClick2Call.MenuInjectionHandler.makeCall(this, event)" data-numbertocall="+441678911888" data-isfreecall="false" data-isrtl="false" data-ismobile="false">
+                                                    <span class="skype_c2c_highlighting_inactive_common" dir="ltr" skypeaction="skype_dropdown">
+                                                        <span class="skype_c2c_textarea_span" id="non_free_num_ui">
+                                                            <img class="skype_c2c_logo_img" src="resource://skype_ff_extension-at-jetpack/skype_ff_extension/data/call_skype_logo.png" height="0" width="0">
+                                                            <span class="skype_c2c_text_span">04.3999.8338 / 01678.911.888 / 01682.911.911</span><span class="skype_c2c_free_text_span"></span>
+                                                        </span>
+                                                    </span>
+                                                </span>
+                                            </font>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><img alt="Web Image" src="@Html.Raw(ViewBag.WebImage)" style="width: 26px; height: 26px;"></td>
+                                        <td>&nbsp;<span style="font-size: 14px;"><font size="2">Vesinhpalmy.vn</font></span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+
+                    <form method="get" action="index.html" target="_blank"
+
+                    <table class="table_contact" border="0" cellpadding="0" cellspacing="0" width="100%">
+                        <tbody>
+                            <tr>
+                                <td valign="top">
+                                    <div class="box_contact">
+                                        <form id="formContact" name="formContact" class="form" method="post" action="/lien-he" onsubmit="return checkform(this)">
+                                            <table class="tbl_contact" align="left" border="0" cellpadding="0" cellspacing="0" width="61%">
+                                                <tbody>
+                                                    <tr>
+                                                        <td width="20%">Họ tên : <span class="font_err">(*)</span></td>
+                                                        <td><input name="name" id="name" value="" class="textfiled" style="width:100%" type="text"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Email : <span class="font_err">(*)</span></td>
+                                                        <td><input name="email" id="email" value="" class="textfiled" style="width:100%" type="text"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Điện thoại : <span class="font_err">(*)</span></td>
+                                                        <td><input name="phone" id="phone" value="" class="textfiled" style="width:100%" type="text"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td valign="top">Nội dung : <span class="font_err">(*)</span></td>
+                                                        <td><textarea name="content" id="content" class="textarea" rows="3" style="width:100%"></textarea></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>&nbsp;</td>
+                                                        <td>
+                                                            <br>
+                                                            <button id="do_submit" name="do_submit" type="submit" class="btn_send" value="Gửi"></button>&nbsp;
+                                                            <button id="btnReset" name="btnReset" type="reset" class="btn_cancel" value="Làm lại"></button>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </form>
+                                        <div class="clear"></div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <div class="col-3 sidebar-wrapper">
+        @{Html.RenderAction("_Tips5", "MainPartialView");}
+    </div>
+    <div class="col-2"></div>
+</div>
+
+
+
+
+

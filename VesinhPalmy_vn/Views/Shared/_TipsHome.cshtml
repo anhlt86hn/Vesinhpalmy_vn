@@ -1,0 +1,48 @@
+﻿@using PagedList.Mvc;
+@using PagedList;
+
+@using VesinhPalmy_vn.Models;
+@model PagedList.IPagedList<VesinhPalmy_vn.Models.News>
+
+
+<div class="box-title">
+    <ul>
+        <li>
+            <h3>
+                <a href="kien-thuc/">
+                    <span>KIẾN THỨC VỆ SINH</span>
+                </a>
+            </h3>
+        </li>
+    </ul>
+</div>
+<div class="box-detail">
+    <ul class="tips-list">
+        @for (int i = 0; i < Model.Count; i++)
+        {
+            if (Request.Url.ToString().IndexOf(Model[i].Tag) > 0)
+            {
+                <li class="current">
+                    <span class="list_active"></span>
+                    <a href="kien-thuc/@Model[i].Tag" class="current">
+
+                        <span>@Model[i].Name</span>
+                    </a><div class="clear"></div>
+                </li>
+            }
+            else
+            {
+                <li class="last">
+                    <span class="list_active"></span>
+
+                    <a href="kien-thuc/@Model[i].Tag" class="last">
+                        <span>@Model[i].Name</span>
+                    </a><div class="clear"></div>
+                </li>
+            }
+        }
+    </ul>
+    <div class="paged-list">
+        @Html.PagedListPager(Model, page => Url.Action("Index", "KienThuc", new { page = page }), (PagedListRenderOptions)ViewBag.ship)
+    </div>
+</div>  

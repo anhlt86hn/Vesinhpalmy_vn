@@ -1,0 +1,388 @@
+﻿<script type='text/javascript'>
+    //<![CDATA[
+    $(document).ready(function () { var str = location.href.toLowerCase(); $('.main-nav ul li a').each(function () { if (str.indexOf(this.href.toLowerCase()) > -1) { $("li.highlight").removeClass("highlight"); $(this).parent().addClass("highlight") } }) })
+    $(function () { var pull = $('#pull'); menu = $('.main-nav ul'); menuHeight = menu.height(); $(pull).on('click', function (e) { e.preventDefault(); menu.slideToggle() }); $(window).resize(function () { var w = $(window).width(); if (w > 320 && menu.is(':hidden')) { menu.removeAttr('style') } }) });
+    //]]>
+</script>
+
+<script type="text/javascript">
+    jQuery(document).ready(function () { jQuery(".abtlikebox").hover(function () { jQuery(this).stop().animate({ right: "0" }, "medium"); }, function () { jQuery(this).stop().animate({ right: "-250" }, "medium"); }, 500); });
+</script>
+
+
+
+<div id="hotline-home" class="box-wrapper">
+    <div class="box-title">
+        <ul><li><h3><span>HOTLINE</span></h3></li></ul>
+    </div>
+    <div class="box-detail">
+        <img src="/Content/Images/support-palmy.jpg" alt="Ho tro khach hang HOTLINE Palmy Vietnam" />
+    </div>
+</div>
+@*<div id="activities-home" class="box-wrapper">
+        @{Html.RenderPartial("~/Views/Shared/_ActivitiesHome.cshtml");}
+    </div>
+    </div>*@
+
+@*<div id="service-home-1" class="service-wrapper">
+        <div class="service-detail">
+            <div class="service-thumbnail">
+                <a title="Dich vu ve sinh van phong, Dịch vụ vệ sinh văn phòng" href="/dich-vu/ve-sinh-van-phong">
+                    <img class="image-thumbnail" width="332" height="205" alt="Dịch vụ vệ sinh văn phòng" src="~/Content/Images/dich-vu-ve-sinh-van-phong-homepage.jpg" />
+                </a>
+            </div>
+            <div class="service-content">
+                <div class="service-header">
+                    <h3 class="service-title">
+                        <a title="Dich vu ve sinh van phong, Dịch vụ vệ sinh văn phòng" href="/dich-vu/ve-sinh-van-phong">DỊCH VỤ VỆ SINH VĂN PHÒNG</a>
+                    </h3>
+                </div>
+                <div class="service-summary">
+                    <p>
+                        Trong xã hội hiện đại, văn phòng công ty -  bộ mặt đại diện cho hình ảnh của doanh nghiệp, là nơi diễn ra hầu hết các hoạt động thường nhật của doanh nghiệp như: gặp khách hàng, giao dịch, ký hợp đồng, làm việc… Hơn thế nữa, thời gian làm việc tại công ty của chúng ta chiếm đến một nửa thời gian sinh hoạt trong ngày, vì vậy công ty cũng giống như ngôi nhà thứ hai của nhiều người.
+                    </p>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+
+     <div id="service-home-2" class="service-wrapper">
+        <div class="service-detail">
+            <div class="service-thumbnail">
+                <a title="Dich vu ve sinh nha cua - nha o, Dịch vụ vệ sinh nhà cửa - nhà ở" href="/dich-vu/ve-sinh-nha-o">
+                    <img class="image-thumbnail" width="332" height="205" alt="Dịch vụ vệ sinh nhà cửa - nhà ở" src="~/Content/Images/dich-vu-ve-sinh-nha-o-homepage.jpg" />
+                </a>
+            </div>
+            <div class="service-content">
+                <div class="service-header">
+                    <h3 class="service-title">
+                        <a title="Dich vu ve sinh nha cua - nha o, Dịch vụ vệ sinh nhà cửa - nhà ở" href="/dich-vu/ve-sinh-van-phong">DỊCH VỤ VỆ SINH Ở</a>
+                    </h3>
+                </div>
+                <div class="service-summary">
+                    <p>
+                        Áp lực cuộc sống trong xã hội hiện đại khiến cho nhiều gia đình không có thời gian để tâm đến những công việc dọn dẹp tổng vệ sinh nhà cửa thường nhật. Dịch vụ vệ sinh nhà cửa, nhà ở tại Hà Nội của Palmy Vietnam với đội ngũ nhân viên vệ sinh đầy kinh nghiệm, đáp ứng nhu cầu vệ sinh, làm sạch cho các hộ gia đình, biệt thự, căn hộ chung cư, nhà ở biệt lập, nhà liền kề.. (đang trong sử dụng và sau xây dựng) với mức chi phí hợp lý, cạnh tranh.
+                    </p>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+
+      <div id="service-home-3" class="service-wrapper">
+        <div class="service-detail">
+            <div class="service-thumbnail">
+                <a title="Dich vu ve sinh sau xay dung, Dịch vụ vệ sinh sau xây dựng" href="/dich-vu/ve-sinh-sau-xay-dung">
+                    <img class="image-thumbnail" width="332" height="205" alt="Dịch vụ vệ sinh sau xây dựng" src="~/Content/Images/dich-vu-ve-sinh-sau-xay-dung-homepage.jpg" />
+                </a>
+            </div>
+            <div class="service-content">
+                <div class="service-header">
+                    <h3 class="service-title">
+                        <a title="Dich vu ve sinh sau xay dung, Dịch vụ vệ sinh sau xây dựng" href="/dich-vu/ve-sinh-sau-xay-dung">DỊCH VỤ VỆ SINH SAU XÂY DỰNG</a>
+                    </h3>
+                </div>
+                <div class="service-summary">
+                    <p>
+                        Các công trình sau xây dựng dù quy mô lớn hay nhỏ khi hoàn thành đều ở trạng thái tồn đọng rác thải xây dựng: vết sơn, chất bẩn, nguyên vật liệu xây dựng còn sót lại như: xi măng, gạch vữa, hóa chất.. Vì thế, công đoạn vệ sinh toàn diện là là khâu cuối cùng và cũng là khâu quan trọng nhất để tạo ra một công trình hoàn chỉnh, sạch đẹp trong một tình trạng hoàn hảo trước khi bàn giao cho chủ sở hữu.
+                    </p>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+
+     <div id="service-home-4" class="service-wrapper">
+        <div class="service-detail">
+            <div class="service-thumbnail">
+                <a title="Dich vu ve sinh theo yeu cau, Dịch vụ vệ sinh theo yêu cầu" href="/dich-vu/ve-sinh-theo-yeu-cau">
+                    <img class="image-thumbnail" width="332" height="205" alt="Dịch vụ vệ sinh theo yêu cầu" src="~/Content/Images/dich-vu-ve-sinh-theo-yeu-cau-homepage.jpg" />
+                </a>
+            </div>
+            <div class="service-content">
+                <div class="service-header">
+                    <h3 class="service-title">
+                        <a title="Dich vu ve sinh theo yeu cau, Dịch vụ vệ sinh theo yêu cầu" href="/dich-vu/ve-sinh-theo-yeu-cau">DỊCH VỤ VỆ SINH THEO YÊU CẦU</a>
+                    </h3>
+                </div>
+                <div class="service-summary">
+                    <p>
+                        Với phương châm “Khách hàng là trọng tâm”, Palmy Vietnam luôn quan tâm đến việc làm thế nào đáp ứng, phục vụ tối đa yêu cầu vệ sinh của khách hàng, vì vậy chúng tôi triển khai thành lập dịch vụ vệ sinh theo yêu cầu của khách hàng. Hiện tại trên thị trường cũng có nhiều đơn vị có loại hình dịch vụ này nhưng làm thế nào để quý khách hàng có thể tránh được những đơn vị dịch vụ báo giá thiếu trung thực gây thiệt hại tài chính cho quý khách hàng? Chúng tôi luôn đứng về phía quý khách hàng và cam kết cung cấp dịch vụ cho quý khách hàng với chi phí hợp lý.
+                    </p>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="service-home-5" class="service-wrapper">
+        <div class="service-detail">
+            <div class="service-thumbnail">
+                <a title="Dich vu ve sinh theo gio, Dịch vụ vệ sinh theo giờ" href="/dich-vu/ve-sinh-theo-gio">
+                    <img class="image-thumbnail" width="332" height="205" alt="Dịch vụ vệ sinh theo giờ" src="~/Content/Images/dich-vu-ve-sinh-theo-gio-homepage.jpg" />
+                </a>
+            </div>
+            <div class="service-content">
+                <div class="service-header">
+                    <h3 class="service-title">
+                        <a title="Dich vu ve sinh theo gio, Dịch vụ vệ sinh theo giờ" href="/dich-vu/ve-sinh-theo-gio">DỊCH VỤ VỆ SINH THEO GIỜ</a>
+                    </h3>
+                </div>
+                <div class="service-summary">
+                    <p>
+                        Dịch vụ vệ sinh theo giờ do công ty vệ sinh cung cấp là dịch vụ được nhiều khách hàng đánh giá cao về chất lượng cũng như giá thành dịch vụ. Khách hàng có thể liên hệ trực tiếp với chúng tôi để nhận được tư vấn sử dụng dịch vụ vệ sinh theo giờ. Dịch vụ vệ sinh theo giờ Palmy Vietnam luôn mang đến bạn & gia đình một không gian tươi mới, sạch sẽ và ấm cúng với một chi phí hợp lý. Công ty vệ sinh nhận làm dịch vụ vệ sinh theo giờ theo yêu cầu của khách hàng.
+                    </p>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+
+     <div id="service-home-6" class="service-wrapper">
+        <div class="service-detail">
+            <div class="service-thumbnail">
+                <a title="Dich vu ve sinh nha xuong, Dịch vụ vệ sinh nhà xưởng" href="/dich-vu/ve-sinh-nha-xuong">
+                    <img class="image-thumbnail" width="332" height="205" alt="Dịch vụ vệ sinh nhà xưởng" src="~/Content/Images/dich-vu-ve-sinh-cong-nghiep.jpg" />
+                </a>
+            </div>
+            <div class="service-content">
+                <div class="service-header">
+                    <h3 class="service-title">
+                        <a title="Dich vu ve sinh nha xuong, Dịch vụ vệ sinh nhà xưởng" href="/dich-vu/ve-sinh-nha-xuong">DỊCH VỤ VỆ SINH NHÀ XƯỞNG</a>
+                    </h3>
+                </div>
+                <div class="service-summary">
+                    <p>
+                        Vệ sinh nhà xưởng là công đoạn sau cùng của giai đoạn hoàn thành xây dựng nhà xưởng hay vệ sinh nhà xưởng vào đầu năm mới hoặc vệ sinh nhà xưởng vào cuối năm chuẩn bị về quê ăn tết. Với ý nghĩa vệ sinh làm cho môi trường khu xưởng trở nên đẹp và sạch hơn mang lại cảm giác sạch sẽ thoáng mát cho khu xưởng tạo cảm hứng tốt cho công nhân - Anh chị em trong phân xưởng yên tâm làm việc.
+
+                    </p>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>*@
+
+
+<div id="tips-home" class="box-wrapper">
+    <div class="box-title">
+        <ul>
+            <li>
+
+                <a href="/kien-thuc">
+                    <span>KIẾN THỨC VỆ SINH</span>
+                </a>
+
+            </li>
+        </ul>
+    </div>
+    <div class="box-detail">
+        <ul class="box-list">
+            @for (int i = 0; i < Model.Count; i++)
+            {
+                if (Request.Url.ToString().IndexOf(Model[i].Tag) > 0)
+                {
+                    <li class="current">
+                        <span class="list_active"></span>
+                        <a href="kien-thuc/@Model[i].Tag" class="current">
+
+                            <span>@Model[i].Name</span>
+                        </a><div class="clear"></div>
+                    </li>
+                }
+                else
+                {
+                    <li class="last">
+                        <span class="list_active"></span>
+
+                        <a href="kien-thuc/@Model[i].Tag" class="last">
+                            <span>@Model[i].Name</span>
+                        </a><div class="clear"></div>
+                    </li>
+                }
+            }
+        </ul>
+        <div class="detail-list"><a href="/kien-thuc"><span>Xem thêm</span></a></div>
+    </div>
+</div>
+   
+<div class="bottom-right">
+        <div class="bottom-right-desc"><span>Chất lượng dịch vụ và nguồn lao động của chúng tôi đáp ứng đầy đủ yêu cầu khắt khe của thị trường theo quy chuẩn tốt nhất. </span></div>
+        <div class="bottom-right-support">
+            <div class="bottom-right-support-left">
+                <div class="bottom-right-support-left-yahoo">
+                    <a href="javascript:;" onclick="NewWindow('http://vesinhpalmy.vn/blocks/support/popup_yahoo.php?lang=vn','Chat',300,500,'yes','center');"><img src="/Content/images/icon-yahoo.png" alt="support yahoo"></a>
+                </div>
+                <div class="bottom-right-support-left-skype">
+                    <a href="javascript:;" onclick="NewWindow('http://vesinhpalmy.vn/blocks/support/popup_skype.php?lang=vn', 'Chat', 300, 500, 'yes', 'center');"><img src="/Content/images/icon-skype.png" alt="support skype"></a>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="bottom-right-support-right">
+                <div class="bottom-right-support-right-hotline">
+                    <span>043 999 8338</span>
+
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+
+
+<div class="tips-home">
+    <div class="block-title">
+        <ul>
+            <li>
+                <h3>
+                    <a href="kien-thuc/">
+                        <span>KIẾN THỨC VỆ SINH</span>
+                    </a>
+                </h3>
+            </li>
+        </ul>
+    </div>
+    <div class="tips-home-wrapper">
+        <ul>
+            @for (int i = 0; i < Model.Count; i++)
+            {
+                if (Request.Url.ToString().IndexOf(Model[i].Tag) > 0)
+                {
+                    <li class="current">
+                        <span class="list_active"></span>
+                        <a href="kien-thuc/@Model[i].Tag" class="current">
+
+                            <span>@Model[i].Name</span>
+                        </a><div class="clear"></div>
+                    </li>
+                }
+                else
+                {
+                    <li class="last">
+                        <span class="list_active"></span>
+
+                        <a href="kien-thuc/@Model[i].Tag" class="last">
+                            <span>@Model[i].Name</span>
+                        </a><div class="clear"></div>
+                    </li>
+                }
+            }
+        </ul>
+
+    </div>
+    <div class="m-pagedlist">
+        @Html.PagedListPager(Model, page => Url.Action("Index", "Home", new { page = page }), (PagedListRenderOptions)ViewBag.ship)
+    </div>
+</div>
+
+@*<div class="title_menu_footer">LĨNH VỰC HOẠT ĐỘNG</div>
+    <div class="box_menu_items">
+        <div class="menu_items ">
+            <div class="title_menu"><div class="title_menu_ahref"><a target="_blank" href="http://vesinhpalmy.vn/">Vệ sinh công nghiệp</a></div></div>
+            <div class="content_menu">
+                <ul class="last">
+                    <li><a target="_blank" href="http://vesinhpalmy.vn/ve-sinh-cong-nghiep">Vệ sinh công nghiệp</a></li>
+                    <li><a target="_blank" href="http://vesinhpalmy.vn/ve-sinh-theo-gio">Vệ sinh theo giờ</a></li>
+                    <li><a target="_blank" href="http://vesinhpalmy.vn/ve-sinh-van-phong">Vệ sinh văn phòng</a></li>
+                    <li><a target="_blank" href="http://vesinhpalmy.vn/ve-sinh-sau-xay-dung">Vệ sinh sau xây dựng</a></li>
+                    <li><a target="_blank" href="http://vesinhpalmy.vn/ve-sinh-nha-o-biet-thu">Vệ sinh nhà ở, biệt thự</a></li>
+                    <li><a target="_blank" href="http://vesinhpalmy.vn/ve-sinh-can-ho-chung-cu">Vệ sinh căn hộ chung cư</a></li>
+                    <li><a target="_blank" href="http://vesinhpalmy.vn/ve-sinh-giat-tham-ghe">Vệ sinh giặt thảm ghế</a></li>
+                    <li><a target="_blank" href="http://vesinhpalmy.vn/ve-sinh-lau-kinh-toa-nha">Vệ sinh lau kính tòa nhà</a></li>
+                    <li><a target="_blank" href="http://vesinhpalmy.vn/ve-sinh-danh-bong-san">Vệ sinh đánh bóng sàn</a></li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="menu_items ">
+            <div class="title_menu"><div class="title_menu_ahref"><a target="_blank" href="http://giupviecpalmy.com">Giúp việc gia đình</a></div></div>
+            <div class="content_menu">
+                <ul class="last">
+                    <li><a target="_blank" href="http://giupviecpalmy.com/giup-viec-theo-gio">Giúp việc theo giờ</a></li>
+                    <li><a target="_blank" href="http://giupviecpalmy.com/giup-viec-gia-dinh">Giúp việc gia đình</a></li>
+                    <li><a target="_blank" href="http://giupviecpalmy.com/nguoi-giup-viec">Người giúp việc</a></li>
+                    <li><a target="_blank" href="http://giupviecpalmy.com/giup-viec-theo-yeu-cau">Giúp việc theo yêu cầu</a></li>
+                    <li><a target="_blank" href="http://giupviecpalmy.com/tap-vu-van-phong">Tạp vụ văn phòng</a></li>
+                    <li><a target="_blank" href="http://giupviecpalmy.com/giup-viec-tet">Giúp việc tết</a></li>
+                    <li><a target="_blank" href="http://giupviecpalmy.com/giup-viec-cham-soc">Giúp việc chăm sóc</a></li>
+                    <li><a target="_blank" href="http://giupviecpalmy.com/dich-vu-ve-sinh">Dịch vụ vệ sinh</a></li>
+
+                </ul>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="menu_items ">
+            <div class="title_menu"><h3><a target="_blank" href="http://homeshoppingpalmy.com">Siêu thị hàng gia dụng</a></h3></div>
+            <div class="content_menu">
+                <ul class="last">
+                    <li><a target="_blank" href="http://homeshoppingpalmy.com">Thực phẩm tươi sống</a></li>
+                    <li><a target="_blank" href="http://homeshoppingpalmy.com">Thực phẩm khô</a></li>
+                    <li><a target="_blank" href="http://homeshoppingpalmy.com">May mặc và phụ kiện</a></li>
+                    <li><a target="_blank" href="http://homeshoppingpalmy.com">Điện gia dụng</a></li>
+                    <li><a target="_blank" href="http://homeshoppingpalmy.com">Vật dụng trang trí nội thất</a></li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+        <div class="menu_items ">
+            <div class="title_menu"><div class="title_menu_ahref"><a target="_blank" href="http://www.maidbyhourpalmy.com/">Giúp việc người nước ngoài</a></div></div>
+            <div class="content_menu">
+                <ul class="last">
+                    <li><a target="_blank" href="http://www.maidbyhourpalmy.com">Hourly domestic maid</a></li>
+                    <li><a target="_blank" href="http://www.maidbyhourpalmy.com">Hourly office maid</a></li>
+                    <li><a target="_blank" href="http://www.maidbyhourpalmy.com">Total office maid</a></li>
+                    <li><a target="_blank" href="http://www.maidbyhourpalmy.com">Domestic Cleaning Service</a></li>
+                    <li><a target="_blank" href="http://www.maidbyhourpalmy.com">Child Care</a></li>
+                    <li><a target="_blank" href="http://www.maidbyhourpalmy.com">Health, Hygiene and Basic 1st Aid For Young Children</a></li>
+                    <li><a target="_blank" href="http://www.maidbyhourpalmy.com">Health Checks</a></li>
+                    <li><a target="_blank" href="http://www.maidbyhourpalmy.com">Housekeeping</a></li>
+                    <li><a target="_blank" href="http://www.maidbyhourpalmy.com">Kitchen Management And Household Safety</a></li>
+                    <li><a target="_blank" href="http://www.maidbyhourpalmy.com">Domestic Cleaning Service</a></li>
+                </ul>
+                </ul>
+                </ul>
+                </ul>
+                </ul>
+                </ul>
+                </ul>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="menu_items ">
+            <div class="title_menu"><div class="title_menu_ahref"><a target="_blank" href="/">Cho thuê xe ô tô</a></div></div>
+            <div class="content_menu">
+                <ul class="last">
+                    <li><a target="_blank" href="/">Thuê xe có lái</a></li>
+                    <li><a target="_blank" href="/">Thuê xe cưới</a></li>
+                    <li><a target="_blank" href="/">Xe lễ hội tham quan</a></li>
+                    <li><a target="_blank" href="/">Thuê xe tháng</a></li>
+                    <li><a target="_blank" href="/">Thuê xe có lái</a></li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="menu_items  last">
+            <div class="title_menu"><h3><a target="_blank" href="/">Bảo vệ an ninh</a></h3></div>
+            <div class="content_menu">
+                <ul class="last">
+                    <li><a target="_blank" href="/">Vệ sỹ</a></li>
+                    <li><a target="_blank" href="/">Áp tải</a></li>
+                    <li><a target="_blank" href="/">Bảo vệ nhà máy, xí nghiệp</a></li>
+                    <li><a target="_blank" href="/">Bảo vệ chung cư</a></li>
+                    <li><a target="_blank" href="/">Bảo vệ công trường xây dựng</a></li>
+                    <li><a target="_blank" href="/">Bảo vệ siêu thị</a></li>
+                    <li><a target="_blank" href="/">Bảo vệ công ty</a></li>
+                    <li><a target="_blank" href="/">Bảo vệ ngân hàng</a></li>
+                    <li><a target="_blank" href="/">Bảo vệ trường học</a></li>
+                    <li><a target="_blank" href="/">Bảo vệ bệnh viện</a></li>
+                    <li><a target="_blank" href="/">Bảo vệ tiệm vàng</a></li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </div>*@

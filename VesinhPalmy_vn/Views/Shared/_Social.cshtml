@@ -1,0 +1,38 @@
+﻿@using System
+@using System.Configuration
+@using System.Data
+@using VesinhPalmy_vn.Models
+
+<ul id="floating_toolbox" class="toolbox">
+    <li><a class="fancy-inline-link" href="#dialog-Facebook"><img src="~/Content/Images/ic-fixpos-fb.png" /></a></li>
+    <li><a class="fancy-inline-link" href="#dialog-Email"><img src="~/Content/Images/ic-fixpos-envelope.png" /></a></li>
+    <li><a class="fancy-inline-link" href="#dialog-Phone"><img src="~/Content/Images/ic-fixpos-mobile.png" /></a></li>
+    <li id="gotop-link" style="display:none;"><a href="#siteheader"><img src="~/Content/Images/ic-fixpos-gotop.png" /></a></li>
+</ul>
+
+<div id="dialog-Facebook" class="dialog">
+    <div class="hdr">Palmy Vietnam trên Facebook</div>
+    <div class="body">
+        <p>Trở thành fan của Palmy Vietnam trên Facebook</p>
+        <div class="fb-like-box" data-href="https://www.facebook.com/pages/PalmyVietnamLtd/593700104006552" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="true" data-locale="vi-VN"></div>
+    </div>
+    <div class="confirm"><a onclick="$(this).parent().hide();">Đóng</a></div>
+</div>
+<div id="dialog-Email" class="dialog">
+    <div class="hdr">Liên lạc qua email</div>
+    <div class="body">
+        <p>Palmy Vietnam luôn mong muốn được nhận phản hồi từ quý khách! Mọi ý kiến đóng góp, xin vui lòng gửi về địa chỉ email:</p>
+        <p class="focus"><a href="mailto:palmyvn@gmail.com">palmyvn@gmail.com</a></p>
+    </div>
+    <div class="confirm"><a onclick="$(this).parent().hide();">Đóng</a></div>
+</div>
+<div id="dialog-Phone" class="dialog">
+    <div class="hdr">Liên lạc qua điện thoại</div>
+    <div class="body">
+        <p>Nếu quý khách cần phản ánh trực tiếp, vui lòng liên lạc qua các số điện thoại nóng sau:</p>
+        <p class="focus">043 999 8338</p>
+        <p class="focus">01682.911.911</p>
+        <p class="focus">01678.911.888</p>
+    </div>
+    <div class="confirm"><a onclick="$(this).parent().hide();">Đóng</a></div>
+</div>

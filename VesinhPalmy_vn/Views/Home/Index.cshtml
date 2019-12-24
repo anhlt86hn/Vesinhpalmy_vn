@@ -1,0 +1,32 @@
+﻿@using PagedList.Mvc;
+@using PagedList;
+
+@using VesinhPalmy_vn.Models;
+
+@{
+    ViewBag.Title = @Html.Raw(ViewBag.tit);
+    ViewBag.des = @Html.Raw(ViewBag.des);
+    ViewBag.key = @Html.Raw(ViewBag.key);
+    Layout = "~/Views/Shared/_MainLayout.cshtml"; 
+}
+
+
+<div class="row container-wrapper">
+    @{Html.RenderAction("_Headline", "MainPartialView");}
+    @*@{Html.RenderAction("_MainSlide", "MainPartialView");}*@
+    @*@{Html.RenderAction("_PromotionHome", "MainPartialView");}*@
+    <div class="col-2"></div>  
+
+    <div class="col-5 content-wrapper">       
+            @{Html.RenderPartial("~/Views/Shared/_Introduction.cshtml");}     
+          
+            @{Html.RenderAction("_Services", "MainPartialView");}        
+    </div>
+
+    <div class="col-3 sidebar-wrapper">                
+            @{Html.RenderAction("_Tips20", "MainPartialView");}
+            @{Html.RenderPartial("~/Views/Shared/_FiveThings.cshtml");}
+    </div>
+    
+    <div class="col-2"></div>  
+    </div>

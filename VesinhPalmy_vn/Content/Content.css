@@ -1,0 +1,541 @@
+﻿/*------------------------------------------------------------------------------------------------------------------------------------------------------
+COMMON CSS OF WEBSITE
+version:1.0
+date:8/8/2015       
+author: luonganh@gmail.com
+email: luonganh@gmail.com
+website: vesinhpalmy.vn     
+-------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+#introduction-thumbnail
+{
+    width:200px;
+    height:80px;
+    margin:5px 5px 0 0;   
+    border:1px solid #bcbcbc;
+    float:left;
+}
+
+#introduction-thumbnail img
+{
+    width:100%;
+    height:100%;
+}
+
+#introduction-text
+{
+    text-align:justify;
+    margin:0 5px;
+    padding:0 5px;
+}
+
+#introduction-message
+{
+    color:#333;
+   font-family:Calibri;
+   font-style: italic; 
+   background: #E6E6E6; 
+   text-align: justify; 
+   border-radius: 5px; 
+   padding: 10px;
+}
+
+
+#slide {margin:0;padding:0;}
+#slide                       {width: 100%; height: 185px; margin:0; display: inherit; float: left;padding:0;}
+#slide #rotator              {width: 100%; margin:0; position:relative;height: 185px;padding:0;display:block;}
+#slide #rotator ul { margin: 0;}
+#slide #rotator ul li        {list-style: none; top: 0; left:0; position: absolute;width:100%;}
+#slide #rotator ul li img    {width: 100%; max-height: 185px; }
+#slide #rotator ul li.show   {z-index: 50;width:100%;}
+
+.services-home
+{
+float:left;
+width:auto;
+background:#fff;
+display:table;
+margin-bottom:10px;
+}
+
+.block 
+{
+    width:100%;
+    margin:0;
+    padding:0;
+}
+
+.service-home 
+{
+    float: left;
+    margin: 0;
+    padding: 5px;
+    /*width:auto;
+    min-width:320px;*/
+    box-sizing: border-box;
+    width: 50%;
+    display: block;
+}
+
+.block .a-block {
+    display: inline;
+    float: left;
+    margin:0;
+    position: relative;
+    text-decoration: none;
+    width:100%;
+    height:150px;
+    overflow: hidden;
+}
+/*a:link, a:visited {
+    color: #176093;
+    text-decoration: none;
+}*/
+.block .a-block:link, .block .a-block:visited {
+    color:yellow;
+
+}
+
+.block .a-block img {
+    display: inline;
+    float: left;
+    width:100%;
+    height:207px;
+}
+
+.block .a-block .txt-holder {
+    bottom: 0px;
+    cursor: pointer;
+    left: 0px;
+    position: absolute;
+    width: 100%;
+}
+
+.block .a-block .txt-holder p {
+    color: #FFF;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 15px;
+    line-height: 16px;
+    padding: 8px 10px;
+    position: relative;
+    text-decoration: none;
+    margin:0;
+}
+.block .a-block .txt-holder p:hover {
+    color: #AAA;
+}
+
+.block .a-block .txt-holder p .txts {
+    position: relative;
+    z-index: 10;
+}
+.block .a-block .txt-holder p .bg {
+    background: #003350 none repeat scroll 0px 0px;
+    border: 0px none;
+    bottom: 0px;
+    height: 100%;
+    left: 0px;
+    opacity: 0.6;
+    position: absolute;
+    width: 100%;
+}
+
+.block .a-block .txt-holder .timestamp, .block .a-block .txt-holder .badge {
+        border: 0px none;
+        color: #DDD;
+        font-size: 10px;
+        line-height: 20px;
+        padding: 0px 10px;
+        position: absolute;
+        text-transform: uppercase;
+        top: -20px;
+    }
+
+.block .a-block .txt-holder .timestamp .txts, .block .a-block .txt-holder .badge .txts {
+    font-family: georgia,serif;
+    position: relative;
+    z-index: 10;
+}
+
+.block .a-block .txt-holder .timestamp .bg {
+    background: #49853E none repeat scroll 0px 0px;
+    border: 0px none;
+    bottom: 0px;
+    height: 100%;
+    left: 0px;
+    opacity: 0.6;
+    position: absolute;
+    width: 100%;
+}
+
+#activities-home {margin:0 auto;}
+
+#images {
+    /*width: 400px;
+    width:640px;
+    height: 250px;
+    height:426px;*/
+    height:426px;
+    padding:5px;
+    display:block;
+    overflow: hidden;
+    position: relative;
+    /*margin: 20px auto;*/
+    margin:10px auto;
+}
+#images img {
+    position: absolute;
+    /*width:640px;
+    height:426px;*/
+    width:100%;
+    height:426px;
+    display:block;
+    top: 0;
+    left: -400px;
+    z-index: 1;
+    opacity: 0;
+    transition: all linear 500ms;
+    -o-transition: all linear 500ms;
+    -moz-transition: all linear 500ms;
+    -webkit-transition: all linear 500ms;
+}
+#images img:target {
+    left: 0;
+    z-index: 9;
+    opacity: 1;
+}
+#images img:first-child {
+    left: 0;
+    opacity: 1;
+}
+
+#slider
+{
+    margin:0 auto;
+    width:110px;
+    margin-bottom:5px;
+}
+
+#slider a {
+    text-decoration: none;
+    background: #E3F1FA;
+    border: 1px solid #C6E4F2;
+    padding: 4px 6px;
+    color: #222;
+}
+
+#slider a:hover {
+    background: #C6E4F2;
+}
+
+
+
+
+#contact-home {
+    max-width:1000px;
+    padding-right:5px;
+   padding:0;
+}
+
+#boxContact {
+	padding: 20px 25px;
+	background: #fff;
+	-webkit-box-shadow: 2px 2px 2px rgba(188, 188, 188, 1);
+	-moz-box-shadow:    2px 2px 2px rgba(188, 188, 188, 1);
+	box-shadow:         2px 2px 2px rgba(188, 188, 188, 1);
+}
+.textarea {
+	padding: 5px 10px 10px 30px;
+	border: 1px solid #c0c0c0;
+	font-size: 12px;
+}
+.select {
+	font-size: 12px;
+	padding: 5px;
+}
+.textfiled {
+	border: none;
+	padding: 2px 10px 2px 30px;
+}
+.table_contact {}
+.table_contact td {
+	padding-bottom: 8px;
+}
+#boxContact .infoContact {
+	padding-bottom: 30px;
+	margin-bottom: 20px;
+	background: url(images/line_contact_info.png) left bottom no-repeat;
+}
+.info_dealer table td {
+	padding: 5px 0;
+}
+#boxContact .maps {
+	border:1px solid #d4d4d4;
+	padding:1px;
+	text-align:center;
+}
+ul.list_maps {
+	float:left;
+	width:100%;
+}
+.list_maps :after {
+	/* clearing without presentational markup, IE gets extra treatment */
+	display: block;
+	clear: both;
+	content: " ";
+}
+.list_maps li {
+	float: left;
+	padding-right:5px;
+}
+.list_maps a {
+	background:url(images/tabR.gif) right top no-repeat;
+	display: block;
+	color: #5cad1b;
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none;
+	padding-right:15px;
+}
+.list_maps a span {
+	background:url(images/tabL.gif) left top no-repeat;
+	display: block;
+	line-height: 30px;
+	padding-top:12px;
+	padding-left:25px;
+	padding-right:10px;
+}
+.list_maps a:hover {
+	color: #e60108;
+}
+.list_maps a:hover span {
+}
+.list_maps .active {
+	top:1px;
+	position:relative;
+}
+.list_maps .active a {
+	background:url(images/tabR_on.gif) top right no-repeat;
+	color: #ffffff;
+}
+.list_maps .active a span {
+	background:url(images/tabL_on.gif) top left no-repeat;
+	line-height: 42px;
+	padding-top:0px;
+}
+/* Map styling*/
+#ce_map_container {
+	/*//padding: 4px;*/
+}
+#ce_map_canvas {
+	width:100%;
+	height:300px
+}
+#ce-directionsPanel {
+	background-color:#FFF
+}
+/* Direction */
+#ce-map-cpanel-switch {
+	padding:8px;
+	font-size:120%;
+	height:40px;
+	margin-top:2px;
+	background:#444 url("images/map-icon.png") no-repeat 20px center
+}
+#ce-map-cpanel-switch a.ce-route, #ce-map-cpanel-switch a.ce-route:visited {
+	color:#FFF;
+	display:block;
+	float:left;
+	margin:10px 0 0 65px
+}
+.ce-map-cpanel fieldset {
+	border-color:#CCC;
+	border-style:solid none none;
+	border-width:1px 0 0;
+	clear:both;
+	margin:3px
+}
+.ce-map-cpanel fieldset legend {
+	font-size:150%
+}
+.ce-map-cpanel div {
+	clear:left;
+	display:block;
+	margin:5px 0 0;
+	padding:1px 3px;
+	width:100%
+}
+.ce-map-cpanel label {
+}
+.ce-map-cpanel div.submit div, .ce-map-cpanel div.submit div button {
+	display:inline
+}
+/* Coordinates*/
+#ce-map-coordinates {
+	background-color:#F2EFE9;
+	height:15px;
+	margin-top:2px;
+	padding:5px 0
+}
+#ce-map-coordinates div {
+	float:left;
+	width:49%;
+	text-align:center
+}
+.ce-map-coord-label {
+	font-weight:bolder
+}
+.ce-map-coord-value {
+}
+/* MAP: End*/
+
+.title_map {
+	color: #565656;
+	line-height: 22px;
+	float: left;
+	padding: 0 10px 0 5px;
+	min-width: 105px;
+	text-align: center;
+	font-size: 12px;
+	line-height: 26px;
+	margin-bottom: -1px;
+	background: url(images/bg_title_maps.gif) right center no-repeat #fff;
+}
+#ext_maps {
+	float: left;
+	width: 100%;
+	margin-top: -1px;
+	-webkit-box-shadow: 2px 2px 2px rgba(188, 188, 188, 1);
+	-moz-box-shadow:    2px 2px 2px rgba(188, 188, 188, 1);
+	box-shadow:         2px 2px 2px rgba(188, 188, 188, 1);
+}
+.btn_contact {
+	background: url(images/btn_normal.png) center no-repeat;
+	border: none;
+	color: #333333;
+	font-weight: bold;
+	font-size: 12px;
+	width: 58px;
+	text-align: center;
+	cursor: pointer;
+	padding: 0;
+	font-family: arial;
+}
+.btn_contact:hover {
+	color: #fff;
+	background: url(images/btn_active.png) center no-repeat;
+}
+.btn_contact span {
+	line-height: 25px;
+	height: 23px;
+	display: inline-block;
+}
+.btn_send {
+	background: url(images/btn_send.png) center no-repeat;
+	border: none;
+	color: #333333;
+	font-weight: bold;
+	font-size: 12px;
+	width: 60px;
+	height: 36px;
+	text-align: center;
+	cursor: pointer;
+	padding: 0;
+	font-family: arial;
+}
+.btn_cancel {
+	background: url(images/btn_cancel.png) center no-repeat;
+	border: none;
+	color: #333333;
+	font-weight: bold;
+	font-size: 12px;
+	width: 60px;
+	height: 36px;
+	text-align: center;
+	cursor: pointer;
+	padding: 0;
+	font-family: arial;
+}
+#name {
+	background: url(images/bg_name.png) left top no-repeat;
+}
+#address {
+	background: url(images/icon_address.png) left top no-repeat;
+}
+#email {
+	background: url(images/bg_email.png) left top no-repeat;
+}
+#phone {
+	background: url(images/bg_phone.png) left top no-repeat;
+}
+#subject {
+	background: url(images/bg_title.png) left top no-repeat;
+}
+#security_code {
+	width: 138px;
+	background: url(images/bg_security.png) left top no-repeat;
+}
+/*#content {
+	background: url(images/bg_content.png) left top no-repeat;
+}*/
+.line_map {
+	padding: 0;
+	padding-bottom: 30px;
+	margin-bottom: 30px;
+	border-bottom: 1px dotted #cccccc;
+}
+
+.box_contact {
+	margin-top: -15px;
+	margin-right: 70px;
+	background: url(images/icon_thanks.png) top right no-repeat;
+}
+.tbl_contact {
+	padding-top: 30px;
+}
+.box_maps {
+	margin-top: 30px;
+}
+
+.info-title span {margin:0 auto;}
+
+
+
+
+#five-things-home
+{
+    min-height:570px;   
+}
+
+.five-things-title
+{
+    font-family:"Courier New";
+    font-weight:bold;
+    font-size:18px;
+    color:#333;
+    line-height:28px;
+    padding:20px;
+    text-align:center;
+}
+
+#five-things-home table
+{
+    margin:0 auto;
+}
+
+#five-things-home td {
+    line-height:18px;
+    padding-right:5px;
+    padding-bottom:16px;
+}
+
+#five-things-home img {
+    width:55px;
+    height:55px;
+}
+
+#five-things-home b
+{
+    font-weight:bold;
+}
+
